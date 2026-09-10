@@ -103,7 +103,8 @@
 
         h1,
         h2,
-        h3 {
+        h3,
+        #overview p {
             text-wrap: balance;
         }
 
@@ -563,6 +564,20 @@
             border-bottom: 1px solid var(--line-2);
         }
 
+        .side .card.dates {
+            border-color: var(--navy);
+            padding-top: 0;
+        }
+
+        .side .card.dates h4 {
+            background: var(--navy);
+            color: #fff;
+            margin: 0 -20px 14px;
+            padding: 10px 20px;
+            border-bottom: 0;
+            border-radius: var(--radius) var(--radius) 0 0;
+        }
+
         .side ul {
             list-style: none;
             padding: 0;
@@ -793,10 +808,10 @@
             <section id="overview">
                 <h2>Course Overview</h2>
                 <p>Real ML systems live in messy environments: delayed feedback, data drift, business constraints.
-                    This course bridges algorithms and production. We start with the classic stack (linear models,
-                    trees) and move to the modern GenAI stack (LLMs, RAG, agents), with an emphasis on problem
-                    framing, system design, and failure analysis.</p>
-                <p>Deep learning and LLMs are the core of the course. We cover enough math for a white-box
+                    This course bridges algorithms and production, from the classic stack (linear models, trees) to
+                    the modern GenAI stack (LLMs, RAG, agents), with an emphasis on problem framing, system design,
+                    and failure analysis.</p>
+                <p>Deep learning and LLMs are the core of the course. We cover enough math for a white&#8209;box
                     understanding of debugging and optimization, not theoretical derivation.</p>
 
                 <h3>What You Will Learn</h3>
@@ -1010,14 +1025,11 @@
         </div>
 
         <aside class="side">
-            <div class="card">
+            <div class="card dates">
                 <h4>Important Dates</h4>
                 <ul>
                     <li class="row"><span>First Lecture</span><span class="meta">Sep 10</span></li>
-                    <li class="row"><span>Assignment 1 Released</span><span class="meta">Sep 24</span></li>
                     <li class="row"><span>Midterm Exam</span><span class="meta">Oct 15</span></li>
-                    <li class="row"><span>Assignment 2 Released</span><span class="meta">Oct 22</span></li>
-                    <li class="row"><span>Assignment 3 Released</span><span class="meta">Nov 12</span></li>
                     <li class="row"><span>No Class (Thanksgiving)</span><span class="meta">Nov 26</span></li>
                     <li class="row"><span>Final Exam</span><span class="meta">Dec 10</span></li>
                 </ul>
