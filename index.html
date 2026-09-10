@@ -535,6 +535,11 @@
             color: var(--text-2);
         }
 
+        dl.rules.compact>div {
+            grid-template-columns: 120px 1fr;
+            padding: 10px 16px;
+        }
+
         /* Sidebar */
         .side {
             font-size: 15px;
@@ -747,8 +752,8 @@
         <div class="wrap">
             <p class="eyebrow">COMS 4995W030 · Fall 2026</p>
             <h1>Applied Machine Learning</h1>
-            <p class="lede">From linear models to LLMs, RAG, and agents, taught the way they are used in
-                production.</p>
+            <p class="lede">From linear regression to LLM agents: build machine learning that survives real-world
+                traffic.</p>
             <ul class="meta">
                 <li><b>Lectures</b> Thursdays, 4:10–6:40 PM</li>
                 <li><b>Location</b> 717 Hamilton Hall</li>
@@ -965,19 +970,18 @@
                 <h2>Course Policies</h2>
                 <p>Highlights only. The <a href="materials/[COMS4995W030 AML Fall26] Syllabus.pdf"
                         target="_blank">syllabus</a> is the complete and authoritative version.</p>
-                <dl class="rules">
+                <dl class="rules compact">
                     <div>
                         <dt>Attendance</dt>
-                        <dd>Optional and not graded. Lectures are streamed and recorded on a best-effort basis.</dd>
+                        <dd>Optional, not graded. Lectures streamed and recorded on a best-effort basis.</dd>
                     </div>
                     <div>
                         <dt>Late Work</dt>
-                        <dd>Up to 24 hours late with a 10% penalty, then 0. Emergencies: email the instructor
-                            <b>before the deadline</b>.</dd>
+                        <dd>Up to 24 h late at 10% off, then 0. Emergencies: email the instructor beforehand.</dd>
                     </div>
                     <div>
                         <dt>Missed Exams</dt>
-                        <dd>Email the instructor before the exam with documentation. Unexcused absence is a 0.</dd>
+                        <dd>Email the instructor before the exam, with documentation. Unexcused is a 0.</dd>
                     </div>
                     <div>
                         <dt>Regrades</dt>
@@ -985,18 +989,16 @@
                     </div>
                     <div>
                         <dt>AI Tools</dt>
-                        <dd>Permitted on all assignments. You own the result and must be able to explain your code.
-                        </dd>
+                        <dd>Permitted everywhere. You own the result and must be able to explain your code.</dd>
                     </div>
                     <div>
                         <dt>Accessibility</dt>
-                        <dd>ODS-certified students contact <b>Robert Kramer</b> (<a
-                                href="mailto:rk3281@columbia.edu">rk3281@columbia.edu</a>), then notify the TAs.</dd>
+                        <dd>ODS-certified students: contact <a href="mailto:rk3281@columbia.edu">Robert Kramer</a>,
+                            then notify the TAs.</dd>
                     </div>
                     <div>
                         <dt>Communication</dt>
-                        <dd>Ed Discussion for everything. Email only for extensions, exam absences, and personal
-                            matters.</dd>
+                        <dd>Ed for all questions. Email only for extensions, exam absences, and personal matters.</dd>
                     </div>
                 </dl>
             </section>
