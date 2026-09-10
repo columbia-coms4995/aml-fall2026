@@ -1,2 +1,5 @@
-# aml-fall2025
-COMS4995W032 Applied Machine Learning for Fall 2025
+# COMS 4995 Applied Machine Learning (Fall 2026)
+
+Course website: https://columbia-coms4995.github.io/aml-fall2026/
+
+Columbia University, Department of Computer Science. Instructor: Dr. Spencer W. Luo.

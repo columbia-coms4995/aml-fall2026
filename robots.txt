@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://columbia-coms4995.github.io/aml-fall2026/sitemap.xml
