@@ -535,17 +535,6 @@
             color: var(--text-2);
         }
 
-        /* Policies */
-        .policy-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .policy-grid .card.wide {
-            grid-column: 1 / -1;
-        }
-
         /* Sidebar */
         .side {
             font-size: 15px;
@@ -663,8 +652,7 @@
                 font-size: 16px;
             }
 
-            .grade-cards,
-            .policy-grid {
+            .grade-cards {
                 grid-template-columns: 1fr;
             }
 
@@ -975,53 +963,42 @@
 
             <section id="policies">
                 <h2>Course Policies</h2>
-                <div class="policy-grid">
-                    <div class="card">
-                        <h4>Attendance &amp; Recordings</h4>
-                        <p>Attendance is optional and not graded. No need to email about absences. Lectures are
-                            streamed on Zoom and recorded on a best-effort basis. If the stream or recording fails,
-                            get notes from peers; the lecture will not be repeated. Attend in person when you can.</p>
+                <p>Highlights only. The <a href="materials/[COMS4995W030 AML Fall26] Syllabus.pdf"
+                        target="_blank">syllabus</a> is the complete and authoritative version.</p>
+                <dl class="rules">
+                    <div>
+                        <dt>Attendance</dt>
+                        <dd>Optional and not graded. Lectures are streamed and recorded on a best-effort basis.</dd>
                     </div>
-                    <div class="card">
-                        <h4>Late Work</h4>
-                        <p>Up to 24 hours late with a 10% penalty. After that, graded as 0. For an interview
-                            schedule, health issue, or other emergency, email the instructor <b>before the
-                                deadline</b> with a brief explanation and documentation where applicable.</p>
+                    <div>
+                        <dt>Late Work</dt>
+                        <dd>Up to 24 hours late with a 10% penalty, then 0. Emergencies: email the instructor
+                            <b>before the deadline</b>.</dd>
                     </div>
-                    <div class="card wide">
-                        <h4>Missed Exams</h4>
-                        <p>Exams are taken in class on the scheduled dates. If illness, a family emergency, a
-                            religious observance, or a documented university obligation prevents you from attending,
-                            email the instructor <b>before the exam begins</b>, or within 24 hours in a true
-                            emergency. Every request needs supporting documentation.</p>
-                        <p>If approved: for the <b>midterm</b>, either a make-up within one week or the 20% moves to
-                            the final, at the teaching staff's discretion. For the <b>final</b>, a make-up during the
-                            University's official exam period; no weight transfer. An unexcused absence is a 0.
-                            Interviews, travel, and other coursework do not qualify.</p>
+                    <div>
+                        <dt>Missed Exams</dt>
+                        <dd>Email the instructor before the exam with documentation. Unexcused absence is a 0.</dd>
                     </div>
-                    <div class="card">
-                        <h4>Regrades</h4>
-                        <p>Request in writing to the TAs within 1 week of grade release. A regrade is a full review, so
-                            the score may go up, down, or stay the same.</p>
+                    <div>
+                        <dt>Regrades</dt>
+                        <dd>In writing to the TAs within 1 week. Full review; the score can go up or down.</dd>
                     </div>
-                    <div class="card">
-                        <h4>AI Policy</h4>
-                        <p>ChatGPT, Claude, Gemini, and similar tools are permitted on all assignments. Verify the
-                            output; broken code is graded as broken. Copying other students' work is plagiarism, and
-                            submitting code you cannot explain or debug in a review is an honor code violation.</p>
+                    <div>
+                        <dt>AI Tools</dt>
+                        <dd>Permitted on all assignments. You own the result and must be able to explain your code.
+                        </dd>
                     </div>
-                    <div class="card">
-                        <h4>Accessibility</h4>
-                        <p>Students certified by the Office of Disability Services (ODS) should contact <b>Robert
-                                Kramer</b> (<a href="mailto:rk3281@columbia.edu">rk3281@columbia.edu</a>) to arrange
-                            confidential accommodations, then notify the TAs so exam timers can be set.</p>
+                    <div>
+                        <dt>Accessibility</dt>
+                        <dd>ODS-certified students contact <b>Robert Kramer</b> (<a
+                                href="mailto:rk3281@columbia.edu">rk3281@columbia.edu</a>), then notify the TAs.</dd>
                     </div>
-                    <div class="card">
-                        <h4>Communication</h4>
-                        <p>Ed Discussion for all course questions. Email only for extension requests, exam absence
-                            requests, and sensitive personal matters.</p>
+                    <div>
+                        <dt>Communication</dt>
+                        <dd>Ed Discussion for everything. Email only for extensions, exam absences, and personal
+                            matters.</dd>
                     </div>
-                </div>
+                </dl>
             </section>
 
         </div>
