@@ -395,6 +395,14 @@
             margin-top: 2px;
         }
 
+        .schedule .assign {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--blue);
+            margin-top: 4px;
+        }
+
         .schedule .materials {
             width: 28%;
         }
@@ -492,6 +500,10 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
+        }
+
+        .policy-grid .card.wide {
+            grid-column: 1 / -1;
         }
 
         /* Sidebar */
@@ -705,7 +717,7 @@
 
     <header class="hero">
         <div class="wrap">
-            <p class="eyebrow">COMS 4995 · Fall 2026</p>
+            <p class="eyebrow">COMS 4995W030 · Fall 2026</p>
             <h1>Applied Machine Learning</h1>
             <p class="lede">From linear models to LLMs, RAG, and agents, taught the way they are used in
                 production.</p>
@@ -793,13 +805,16 @@
                         <tr>
                             <td class="week">Week 3<span class="date">Sep 24</span></td>
                             <td><span class="topic">Linear Models</span>
-                                <span class="case">Industry case: Why Linear Regression is still widely used in Ads</span>
+                                <span class="case">Industry case: Why Linear Regression is still widely used in Ads (latency constraints)</span>
+                                <span class="assign">Assignment 1 out</span>
                             </td>
                             <td class="materials"><span class="none">—</span></td>
                         </tr>
                         <tr>
                             <td class="week">Week 4<span class="date">Oct 1</span></td>
-                            <td><span class="topic">Model Evaluation &amp; Bias-Variance</span></td>
+                            <td><span class="topic">Model Evaluation &amp; Bias-Variance</span>
+                                <span class="case">Focus: Beyond accuracy (precision, recall, AUC)</span>
+                            </td>
                             <td class="materials"><span class="none">—</span></td>
                         </tr>
                         <tr>
@@ -816,7 +831,9 @@
                         </tr>
                         <tr>
                             <td class="week">Week 7<span class="date">Oct 22</span></td>
-                            <td><span class="topic">Neural Networks Fundamentals</span></td>
+                            <td><span class="topic">Neural Networks Fundamentals</span>
+                                <span class="assign">Assignment 2 out</span>
+                            </td>
                             <td class="materials"><span class="none">—</span></td>
                         </tr>
                         <tr>
@@ -833,13 +850,15 @@
                         </tr>
                         <tr>
                             <td class="week">Week 10<span class="date">Nov 12</span></td>
-                            <td><span class="topic">Reward and Retrieval for LLM</span></td>
+                            <td><span class="topic">Reward and Retrieval for LLM</span>
+                                <span class="assign">Assignment 3 out</span>
+                            </td>
                             <td class="materials"><span class="none">—</span></td>
                         </tr>
                         <tr>
                             <td class="week">Week 11<span class="date">Nov 19</span></td>
                             <td><span class="topic">LLM Agents &amp; Tool Use</span>
-                                <span class="case">Industry case: Why Agents get stuck and how to add guardrails</span>
+                                <span class="case">Industry case: Autonomous loop failures, why agents get stuck and how to add guardrails</span>
                             </td>
                             <td class="materials"><span class="none">—</span></td>
                         </tr>
@@ -902,12 +921,14 @@
                     </div>
                     <div>
                         <dt>Curve</dt>
-                        <dd>Letter grades are relative to the class distribution. No fixed percentage cutoffs.</dd>
+                        <dd>Letter grades are relative to the class distribution. No fixed percentage cutoffs.
+                            Numerical scores are rounded to the nearest whole number first.</dd>
                     </div>
                     <div>
                         <dt>Exam Scope</dt>
-                        <dd>Everything covered: lectures, slides, homework, readings, code, case studies, Ed posts.
-                            Exams test engineering intuition, not memorization.</dd>
+                        <dd>Everything covered: lectures, slides, whiteboard discussions, homework, readings, code,
+                            case studies, guest content, Ed posts. Exams test engineering intuition and system design
+                            thinking, not memorization.</dd>
                     </div>
                 </dl>
             </section>
@@ -918,33 +939,47 @@
                     <div class="card">
                         <h4>Attendance &amp; Recordings</h4>
                         <p>Attendance is optional and not graded. No need to email about absences. Lectures are
-                            streamed on Zoom and recorded on a best-effort basis, so attend in person when you can.
-                        </p>
+                            streamed on Zoom and recorded on a best-effort basis. If the stream or recording fails,
+                            get notes from peers; the lecture will not be repeated. Attend in person when you can.</p>
                     </div>
                     <div class="card">
                         <h4>Late Work</h4>
-                        <p>Up to 24 hours late with a 10% penalty. Nothing is accepted after that. Need an extension?
-                            Submit the Google Form (posted on Ed) <b>before the deadline</b>.</p>
+                        <p>Up to 24 hours late with a 10% penalty. After that, graded as 0. Interview schedule,
+                            health issue, or other emergency? Email the instructor <b>before the deadline</b> with a
+                            brief explanation and documentation where applicable.</p>
+                    </div>
+                    <div class="card wide">
+                        <h4>Missed Exams</h4>
+                        <p>Exams are taken in class on the scheduled dates. If illness, a family emergency, a
+                            religious observance, or a documented university obligation prevents you from attending,
+                            email the instructor <b>before the exam begins</b>, or within 24 hours in a true
+                            emergency. Every request needs supporting documentation.</p>
+                        <p>If approved: for the <b>midterm</b>, either a make-up within one week or the 20% moves to
+                            the final, at the teaching staff's discretion. For the <b>final</b>, a make-up during the
+                            University's official exam period; no weight transfer. An unexcused absence is a 0.
+                            Interviews, travel, and other coursework do not qualify.</p>
                     </div>
                     <div class="card">
                         <h4>Regrades</h4>
-                        <p>Request in writing to the TAs within 1 week of grade release. A regrade is a full review of
-                            the submission.</p>
+                        <p>Request in writing to the TAs within 1 week of grade release. A regrade is a full review, so
+                            the score may go up, down, or stay the same.</p>
                     </div>
                     <div class="card">
                         <h4>AI Policy</h4>
-                        <p>ChatGPT, Claude, Gemini, and similar tools are fully permitted. Verify the output; broken
-                            code is graded as broken. Copying other students' work is plagiarism.</p>
+                        <p>ChatGPT, Claude, Gemini, and similar tools are permitted on all assignments. Verify the
+                            output; broken code is graded as broken. Copying other students' work is plagiarism, and
+                            submitting code you cannot explain or debug in a review is an honor code violation.</p>
                     </div>
                     <div class="card">
                         <h4>Accessibility</h4>
                         <p>Registered with ODS? Contact <b>Robert Kramer</b> (<a
-                                href="mailto:rk3281@columbia.edu">rk3281@columbia.edu</a>) to arrange accommodations,
-                            then let the TAs know so we can set exam timers.</p>
+                                href="mailto:rk3281@columbia.edu">rk3281@columbia.edu</a>) to arrange confidential
+                            logistics, then let the TAs know so we can set exam timers.</p>
                     </div>
                     <div class="card">
                         <h4>Communication</h4>
-                        <p>Ed Discussion for all course questions. Email only for sensitive personal matters.</p>
+                        <p>Ed Discussion for all course questions. Email only for extension requests, exam absence
+                            requests, and sensitive personal matters.</p>
                     </div>
                 </div>
             </section>
@@ -976,7 +1011,7 @@
                 <h4>Instructor</h4>
                 <ul>
                     <li>
-                        <span class="who">Dr. Spencer Luo</span>
+                        <span class="who">Dr. Spencer W. Luo</span>
                         <span class="meta"><a href="mailto:swl2145@columbia.edu">swl2145@columbia.edu</a></span>
                     </li>
                 </ul>
@@ -994,12 +1029,12 @@
                         <span class="meta"><a href="mailto:pr2789@columbia.edu">pr2789@columbia.edu</a></span>
                     </li>
                     <li>
-                        <span class="who">Kuan-Ting Chen</span>
-                        <span class="meta"><a href="mailto:kc3953@columbia.edu">kc3953@columbia.edu</a></span>
-                    </li>
-                    <li>
                         <span class="who">Byeolah Kwon</span>
                         <span class="meta"><a href="mailto:bk2833@columbia.edu">bk2833@columbia.edu</a></span>
+                    </li>
+                    <li>
+                        <span class="who">Kuan-Ting Chen</span>
+                        <span class="meta"><a href="mailto:kc3953@columbia.edu">kc3953@columbia.edu</a></span>
                     </li>
                 </ul>
             </div>
@@ -1009,10 +1044,11 @@
                 <ul class="oh">
                     <li><span class="who">Zoga Duka</span><span class="day">TBA</span></li>
                     <li><span class="who">Prajwal Raghunath</span><span class="day">TBA</span></li>
-                    <li><span class="who">Kuan-Ting Chen</span><span class="day">TBA</span></li>
                     <li><span class="who">Byeolah Kwon</span><span class="day">TBA</span></li>
+                    <li><span class="who">Kuan-Ting Chen</span><span class="day">TBA</span></li>
                 </ul>
-                <p class="fine">Schedule and location will be posted on Ed.</p>
+                <p class="fine">Schedule and location will be posted on Ed. Optional TA-led recitations offer coding and math
+                    refreshers.</p>
             </div>
 
 
