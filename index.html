@@ -60,6 +60,7 @@
             --blue: #0b5cad;
             --blue-hover: #084a8c;
             --columbia: #b9d9eb;
+            --columbia-mid: #75aadb;
             --sky: #e9f3fa;
             --text: #1b2430;
             --text-2: #4b5563;
@@ -564,18 +565,17 @@
             border-bottom: 1px solid var(--line-2);
         }
 
-        .side .card.dates {
-            border-color: var(--navy);
+        .side .card {
             padding-top: 0;
+            overflow: hidden;
         }
 
-        .side .card.dates h4 {
-            background: var(--navy);
-            color: #fff;
+        .side .card h4 {
+            background: var(--columbia-mid);
+            color: var(--navy);
             margin: 0 -20px 14px;
-            padding: 10px 20px;
+            padding: 9px 20px;
             border-bottom: 0;
-            border-radius: var(--radius) var(--radius) 0 0;
         }
 
         .side ul {
@@ -1025,7 +1025,7 @@
         </div>
 
         <aside class="side">
-            <div class="card dates">
+            <div class="card">
                 <h4>Important Dates</h4>
                 <ul>
                     <li class="row"><span>First Lecture</span><span class="meta">Sep 10</span></li>
