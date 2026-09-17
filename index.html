@@ -476,6 +476,32 @@
             background: var(--sky);
         }
 
+        .chip::before {
+            content: "";
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            margin-right: 5px;
+            vertical-align: -2px;
+            background-color: currentColor;
+            -webkit-mask: var(--icon) center / contain no-repeat;
+            mask: var(--icon) center / contain no-repeat;
+        }
+
+        .chip.slides {
+            --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='1.5' y='2' width='13' height='9' rx='1'/%3E%3Cpath d='M8 11v3M5 14h6'/%3E%3C/svg%3E");
+            background: var(--sky);
+            border-color: #cfe3f0;
+        }
+
+        .chip.slides:hover {
+            border-color: var(--blue);
+        }
+
+        .chip.colab {
+            --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23000' stroke-width='1.6' stroke-linejoin='round'%3E%3Ccircle cx='8' cy='8' r='6.3'/%3E%3Cpath d='M6.6 5.4v5.2l4.2-2.6z' fill='%23000'/%3E%3C/svg%3E");
+        }
+
         .schedule tr.exam td {
             background: var(--sky);
         }
@@ -846,15 +872,15 @@
                             <td class="week">Week 1<span class="date">Sep 10</span></td>
                             <td><span class="topic">Introduction to Applied Machine Learning</span></td>
                             <td class="materials">
-                                <a class="chip" href="materials/[COMS4995W30 AML] L1 - Introduction to Machine Learning.pdf" target="_blank">Slides</a>
+                                <a class="chip slides" href="materials/[COMS4995W30 AML] L1 - Introduction to Machine Learning.pdf" target="_blank">Slides</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="week">Week 2<span class="date">Sep 17</span></td>
                             <td><span class="topic">Data Preparation and Feature Engineering</span></td>
                             <td class="materials">
-                                <a class="chip" href="materials/[COMS4995W30 AML] L2 - Data.pdf" target="_blank">Slides</a>
-                                <a class="chip" href="https://colab.research.google.com/drive/1Dg0r5i_-ONC2hAf9MNMFox7_IB2UMCNH?usp=sharing" target="_blank">Colab</a>
+                                <a class="chip slides" href="materials/[COMS4995W30 AML] L2 - Data.pdf" target="_blank">Slides</a>
+                                <a class="chip colab" href="https://colab.research.google.com/drive/1Dg0r5i_-ONC2hAf9MNMFox7_IB2UMCNH?usp=sharing" target="_blank">Colab</a>
                             </td>
                         </tr>
                         <tr>
