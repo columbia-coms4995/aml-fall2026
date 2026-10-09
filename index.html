@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMS 4995 Applied Machine Learning | Columbia University</title>
-    <meta name="description"
-        content="Course website for COMS 4995 Applied Machine Learning at Columbia University, Fall 2026. Schedule, lecture slides, grading, policies, and teaching staff. Instructor: Dr. Spencer W. Luo.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://columbia-coms4995.github.io/aml-fall2026/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="COMS 4995 Applied Machine Learning | Columbia University">
-    <meta property="og:description"
-        content="Fall 2026 course website: schedule, slides, grading, policies, and staff. From linear models to LLMs, RAG, and agents.">
-    <meta property="og:url" content="https://columbia-coms4995.github.io/aml-fall2026/">
-    <meta property="og:site_name" content="Columbia COMS 4995">
-    <meta name="twitter:card" content="summary">
-    <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>COMS 4995 Applied Machine Learning | Columbia University</title>
+<meta content="Course website for COMS 4995 Applied Machine Learning at Columbia University, Fall 2026. Schedule, lecture slides, grading, policies, and teaching staff. Instructor: Dr. Spencer W. Luo." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://columbia-coms4995.github.io/aml-fall2026/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="COMS 4995 Applied Machine Learning | Columbia University" property="og:title"/>
+<meta content="Fall 2026 course website: schedule, slides, grading, policies, and staff. From linear models to LLMs, RAG, and agents." property="og:description"/>
+<meta content="https://columbia-coms4995.github.io/aml-fall2026/" property="og:url"/>
+<meta content="Columbia COMS 4995" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Course",
@@ -45,15 +43,14 @@
       }
     }
     </script>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <meta name="theme-color" content="#0a2d57">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-        rel="stylesheet">
-    <style>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="#0a2d57" name="theme-color"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital%2Cwght@0%2C400%3B0%2C600%3B0%2C700%3B1%2C400&amp;display=swap" rel="stylesheet"/>
+<style>
         :root {
             --navy: #0a2d57;
             --navy-2: #123a6b;
@@ -797,375 +794,611 @@
             }
         }
     </style>
-</head>
-
-<body>
-    <div class="topbar">
-        <div class="wrap">
-            <div class="brand">Columbia University <span>· Department of Computer Science</span></div>
-        </div>
-    </div>
-
-    <header class="hero">
-        <div class="wrap">
-            <p class="eyebrow">COMS 4995W030 · Fall 2026</p>
-            <h1>Applied Machine Learning</h1>
-            <p class="lede">The full applied ML stack, from linear regression to LLM agents, built to survive
-                production.</p>
-            <ul class="meta">
-                <li><b>Lectures</b> Thursdays, 4:10–6:40 PM</li>
-                <li><b>Location</b> 717 Hamilton Hall</li>
-                <li><b>Credits</b> 3.0</li>
-            </ul>
-            <div class="actions">
-                <a class="btn btn-primary" href="materials/[COMS4995W030 AML Fall26] Syllabus.pdf"
-                    target="_blank">Syllabus (PDF)</a>
-                <a class="btn btn-ghost" href="https://edstem.org/us/courses/105840/discussion" target="_blank">Ed
-                    Discussion</a>
-                <a class="btn btn-ghost" href="https://courseworks2.columbia.edu/courses/252435"
-                    target="_blank">Courseworks</a>
-            </div>
-        </div>
-    </header>
-
-    <nav class="subnav">
-        <div class="wrap">
-            <ul>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#grading">Grading</a></li>
-                <li><a href="#policies">Policies</a></li>
-                <li><a href="#staff">Staff &amp; Office Hours</a></li>
-                <li><a href="#resources">Resources</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main class="wrap layout">
-        <div class="main">
-
-            <section id="overview">
-                <h2>Course Overview</h2>
-                <p>Real ML systems live in messy environments: delayed feedback, data drift, business constraints.
+<style id="course-refinements">/* Modest refinements for the existing semester page. */
+body { font-size: 17px; }
+.wrap { max-width: 1200px; }
+.topbar { font-size: 14px; }
+.hero { padding-block: 40px 36px; }
+.hero h1 { font-size: 44px; letter-spacing: -.025em; }
+.hero .lede { font-size: 19px; }
+.hero .meta { font-size: 16px; margin-bottom: 24px; }
+.hero .eyebrow { font-size: 15px; }
+.btn { border-radius: 4px; font-size: 16px; }
+.subnav a { font-size: 16px; }
+.subnav a[aria-current="location"] { color: var(--navy); border-bottom-color: var(--blue); }
+.layout { gap: 40px; padding-top: 32px; }
+section { margin-bottom: 44px; }
+h2 { font-size: 28px; letter-spacing: -.015em; border-bottom-color: #c7d9e6; }
+h3 { font-size: 19px; }
+.side .card { border-radius: 4px; }
+.side .card h4 { font-size: 16px; font-weight: 600; letter-spacing: 0; text-transform: none; background: #deecf5; padding-block: 10px; }
+.side .meta, .side .fine, .side .oh .day { font-size: 15px; color: #536273; }
+.side { font-size: 16px; }
+.card p { font-size: 16px; }
+.side .row { gap: 8px; }
+.side .row .meta { white-space: normal; }
+.side .oh li { gap: 8px; }
+.schedule { font-size: 16px; }
+.schedule thead th { font-size: 14px; letter-spacing: .025em; }
+.schedule .topic { font-size: 17px; }
+.schedule .week { font-size: 15px; color: #536273; }
+.schedule .week .date { font-size: 15px; color: #536273; }
+.schedule .case { font-size: 15px; color: #536273; line-height: 1.5; margin-top: 4px; }
+.schedule .assign { font-size: 15px; }
+.schedule .materials { width: 26%; }
+.chip { font-size: 14px; line-height: 1.5; border-radius: 4px; padding: 4px 9px; margin: 2px 4px 2px 0; }
+.grade-cards .name { font-size: 17px; }
+.grade-cards p { font-size: 16px; }
+.grade-cards .card { border-top-color: #95bdd8; }
+dl.rules > div { font-size: 16px; }
+.term-update { background: #f0f6fa; border-bottom: 1px solid #d1e1ed; }
+.term-update > .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 14px; }
+.update-next, .update-recent { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.update-label { font-size: 15px; color: #536273; }
+.update-target { font-size: 17px; font-weight: 600; color: var(--navy); }
+.update-materials { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.update-materials a { font-size: 16px; font-weight: 600; }
+.update-office { white-space: nowrap; font-size: 16px; }
+.term-update a { text-decoration: underline; text-underline-offset: .2em; }
+.schedule tr.is-next td { background: #e5f1f9; }
+.schedule tr.is-next td:first-child { box-shadow: inset 3px 0 var(--blue); }
+.next-label { display: block; font-size: 14px; font-weight: 600; color: var(--blue); line-height: 1.35; margin-top: 4px; letter-spacing: 0; text-transform: none; }
+.schedule tr:target { outline: 2px solid var(--blue); outline-offset: -2px; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.skip-link { position: absolute; left: 20px; top: -100px; padding: 10px 16px; background: #fff; z-index: 100; }
+.skip-link:focus { top: 10px; }
+@media (max-width: 1000px) {
+  .layout { gap: 32px; }
+  .side { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+  .side .card { margin-bottom: 0; }
+}
+@media (max-width: 640px) {
+  .hero { padding-block: 29px; }
+  .hero h1 { font-size: 34px; }
+  .hero .lede { font-size: 17px; }
+  .hero .meta { font-size: 16px; }
+  .term-update > .wrap { flex-wrap: wrap; align-items: baseline; gap: 12px 24px; padding-block: 14px; }
+  .update-next { flex-basis: 100%; }
+  .update-recent { flex: 1; }
+  .update-office { align-self: end; padding-bottom: 3px; }
+  .layout { padding-top: 26px; }
+  .schedule .week { width: auto; font-size: 14px; letter-spacing: .02em; }
+  .schedule .week .date { font-size: 14px; }
+  .schedule .materials { width: 100%; flex-direction: row; gap: 6px; }
+  .schedule .chip { margin: 0; }
+  .schedule tr.is-next { background: #e5f1f9; box-shadow: inset 3px 0 var(--blue); }
+  .schedule tr.is-next td { background: transparent; }
+  .schedule tr.is-next td:first-child { box-shadow: none; }
+  .next-label { display: inline; margin-left: 10px; }
+  .side { display: block; }
+  .side .card { margin-bottom: 16px; }
+  .grade-cards { gap: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+@media print {
+  .subnav, .term-update, .skip-link { display: none; }
+  .layout { display: block; }
+  .side { display: block; }
+  .hero { background: #fff; color: var(--navy); }
+  .hero .lede, .hero .meta, .hero .meta b, .hero .eyebrow { color: var(--navy); }
+}
+</style><style id="course-compact-styles">/* Keep the established course identity; give the schedule priority. */
+.hero { padding-block: 32px; }
+.hero .instructor-byline { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 10px; margin: 0 0 14px; font-size: 19px; line-height: 1.4; color: inherit; }
+.instructor-byline > span { font-size: 16px; opacity: .85; }
+.hero .instructor-byline a { color: inherit; font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; text-decoration-color: var(--columbia); }
+.hero .lede { margin-bottom: 18px; }
+.hero .meta { margin-bottom: 20px; }
+.layout { grid-template-columns: minmax(0, 1fr) 284px; gap: 32px; padding-top: 28px; }
+section { margin-bottom: 32px; }
+h2 { font-size: 26px; margin-bottom: 16px; padding-bottom: 0; border-bottom: 0; }
+.term-update > .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 284px; gap: 32px; align-items: start; }
+.update-recent { border-left: 1px solid #d1e1ed; padding-left: 20px; }
+.schedule { table-layout: fixed; }
+.schedule thead th:first-child { width: 96px; }
+.schedule thead th:last-child, .schedule .materials { width: 218px; }
+.schedule .topic { font-weight: 600; }
+.schedule .week { width: auto; }
+.schedule .chip { white-space: nowrap; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.course-brief { margin: 0 0 12px; font-size: 18px; line-height: 1.55; }
+#overview .course-brief { text-wrap: pretty; }
+#overview { margin-bottom: 26px; }
+.instructor-note { margin: 0 0 16px; padding-left: 18px; border-left: 3px solid var(--columbia); }
+.instructor-note h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.3; color: var(--navy); }
+.instructor-note p { margin: 0 0 10px; font-size: 17px; line-height: 1.5; }
+#overview .instructor-note p { text-wrap: pretty; }
+.instructor-note p:last-child { margin-bottom: 0; }
+.course-disclosure { border-top: 1px solid var(--line); }
+.course-disclosure > summary { padding: 12px 28px 12px 0; position: relative; font-size: 16px; font-weight: 600; color: var(--navy); line-height: 1.5; cursor: pointer; list-style: none; }
+.course-disclosure > summary::-webkit-details-marker { display: none; }
+.course-disclosure > summary::after { content: '+'; position: absolute; right: 2px; top: 10px; font-size: 21px; font-weight: 400; line-height: 1.3; color: var(--blue); }
+.course-disclosure[open] > summary::after { content: '−'; }
+.course-disclosure > summary:hover { color: var(--blue); }
+.disclosure-body { padding: 3px 0 14px; font-size: 17px; }
+.disclosure-body > :last-child { margin-bottom: 0; }
+#grading .grade-cards { margin-bottom: 18px; }
+.grade-cards .card { padding: 16px; }
+.grade-cards .pct { font-size: 38px; line-height: 1.1; }
+.grade-cards .name { margin-bottom: 4px; }
+.grade-cards .card p:last-child { margin-bottom: 0; font-size: 16px; line-height: 1.45; }
+.policy-brief { margin-bottom: 8px; }
+.side .course-disclosure { margin-inline: 0; }
+.side .card h4 { background: var(--sky); }
+.side .oh a.who { text-decoration: underline; text-decoration-color: var(--columbia-mid); text-underline-offset: 3px; }
+.anchor-alias { display: block; height: 0; scroll-margin-top: 78px; }
+.side .course-disclosure .disclosure-body { padding-top: 0; }
+.side .course-disclosure ul { padding: 0; }
+.side .course-disclosure ul li:last-child { margin-bottom: 0; }
+#resources { background: transparent; border: 0; border-top: 1px solid var(--line); }
+#resources .course-disclosure { margin: 0; border: 0; }
+@media (min-width: 1001px) and (min-height: 760px) {
+  .side { position: sticky; top: 78px; align-self: start; max-height: calc(100dvh - 96px); overflow-y: auto; scrollbar-width: thin; }
+}
+@media (max-width: 1000px) {
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  .term-update > .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .side { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #resources { grid-column: 1 / -1; }
+}
+@media (min-width: 641px) and (max-width: 780px) {
+  .schedule thead th:first-child { width: 80px; }
+  .schedule thead th:last-child, .schedule .materials { width: 198px; }
+}
+@media (max-width: 640px) {
+  .wrap { padding-inline: 20px; }
+  .hero { padding-block: 25px; }
+  .hero .lede { margin-bottom: 16px; }
+  .hero .meta { margin-bottom: 18px; display: grid; gap: 4px; }
+  .hero .meta li { display: grid; grid-template-columns: 74px minmax(0, 1fr); }
+  .hero .actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .hero .actions .btn { padding: 10px 5px; text-align: center; font-size: 16px; white-space: nowrap; min-height: 46px; }
+  .subnav ul { justify-content: space-between; gap: 16px; }
+  .subnav a { font-size: 16px; padding-inline: 0; }
+  .term-update > .wrap { grid-template-columns: minmax(0, 1fr); gap: 9px; align-items: center; padding-block: 12px; }
+  .update-next, .update-recent { display: grid; grid-template-columns: 126px minmax(0, 1fr); gap: 14px; align-items: center; }
+  .update-recent { padding-left: 0; border-left: 0; }
+  .update-label { line-height: 1.4; }
+  .update-label-separator { display: none; }
+  .update-material-date { display: block; }
+  .update-target { line-height: 1.4; }
+  .update-materials { column-gap: 16px; }
+  .layout { padding-top: 22px; }
+  .course-brief { font-size: 17px; }
+  #overview { margin-bottom: 22px; }
+  .grade-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .grade-cards .card { padding: 12px 0 0; border: 0; border-top: 3px solid #95bdd8; border-radius: 0; }
+  .grade-cards .pct { font-size: 34px; }
+  .grade-cards .name { font-size: 17px; }
+  .schedule .materials { width: 100%; }
+  dl.rules.compact > div { grid-template-columns: minmax(0, 1fr); }
+  .disclosure-body > dl + dl { margin-top: 12px; }
+  .side { display: block; }
+}
+@media (max-width: 359px) {
+  .hero .actions { grid-template-columns: .8fr 1.05fr 1.15fr; }
+  .hero .actions .btn { font-size: 15px; padding-inline: 3px; }
+  .update-next, .update-recent { grid-template-columns: 110px minmax(0, 1fr); gap: 10px; }
+}
+@media print {
+  .side { position: static; max-height: none; overflow: visible; }
+  .course-disclosure::details-content { content-visibility: visible; }
+  .course-disclosure .disclosure-body { display: block !important; }
+  .course-disclosure > summary::after { content: none; }
+  .course-disclosure > summary { break-after: avoid; }
+}
+</style></head>
+<body><a class="skip-link" href="#schedule">Skip to schedule</a>
+<div class="topbar">
+<div class="wrap">
+<div class="brand">Columbia University <span>· Department of Computer Science</span></div>
+</div>
+</div>
+<header class="hero">
+<div class="wrap">
+<p class="eyebrow">COMS 4995W030 · Fall 2026</p>
+<h1>Applied Machine Learning</h1><p class="instructor-byline"><span>Instructor</span><a aria-label="Email Dr. Spencer W. Luo" href="mailto:swl2145@columbia.edu">Dr. Spencer W. Luo</a></p>
+<p class="lede">Machine learning for industry, from linear models to LLM agents.</p>
+<ul class="meta">
+<li><b>Lectures</b> Thursdays, 4:10–6:40 PM</li>
+<li><b>Location</b> 717 Hamilton Hall</li>
+<li><b>Credits</b> 3.0</li>
+</ul>
+<div class="actions">
+<a class="btn btn-primary" href="materials/%5BCOMS4995W030%20AML%20Fall26%5D%20Syllabus.pdf" rel="noopener" target="_blank">Syllabus</a>
+<a class="btn btn-ghost" href="https://edstem.org/us/courses/105840/discussion" rel="noopener" target="_blank">Ed discussion</a>
+<a class="btn btn-ghost" href="https://courseworks2.columbia.edu/courses/252435" rel="noopener" target="_blank">CourseWorks</a>
+</div>
+</div>
+</header>
+<nav aria-label="Course sections" class="subnav">
+<div class="wrap">
+<ul><li><a href="#schedule">Schedule</a></li><li><a href="#grading">Grading</a></li><li><a href="#policies">Policies</a></li><li><a href="#office-hours">Help</a></li></ul>
+</div>
+</nav><aside aria-label="Current course information" class="term-update" hidden=""><div class="wrap"><div class="update-next"><span class="update-label">Next class</span><a class="update-target" href="#schedule"></a></div><div class="update-recent"><span class="update-label">Latest materials</span><span class="update-materials"></span></div></div></aside>
+<main class="wrap layout">
+<div class="main">
+<section id="overview"><h2 class="visually-hidden">About the course</h2><aside aria-labelledby="instructor-note-title" class="instructor-note"><h3 id="instructor-note-title">We’re here to help you succeed.</h3><p>Build skills for interviews and real ML work. Ask questions, make mistakes, and learn.</p><p>The TAs and I are on your side.</p></aside><details class="course-disclosure" id="course-details"><summary>Course details &amp; prerequisites</summary><div class="disclosure-body">
+<p>Real ML systems live in messy environments: delayed feedback, data drift, business constraints.
                     This course bridges algorithms and production, from the classic stack (linear models, trees) to
                     the modern GenAI stack (LLMs, RAG, agents), with an emphasis on problem framing, system design,
                     and failure analysis.</p>
-                <p>Deep learning and LLMs are the core of the course. We cover enough math for a white&#8209;box
+<p>Deep learning and LLMs are the core of the course. We cover enough math for a white‑box
                     understanding of debugging and optimization, not theoretical derivation.</p>
-
-                <h3>What You Will Learn</h3>
-                <ul>
-                    <li>Turn ambiguous business requirements into well-defined ML tasks</li>
-                    <li>Understand why models fail in production</li>
-                    <li>Build RAG systems, run supervised fine-tuning, design LLM agents</li>
-                    <li>Feature engineering, pipelines, and error analysis with scikit-learn</li>
-                    <li>Use AI coding assistants to ship production-ready code</li>
-                </ul>
-
-                <h3>Prerequisites</h3>
-                <ul>
-                    <li>Python 3 with pandas, numpy, and pytorch</li>
-                    <li>Linear algebra and basic probability and statistics</li>
-                    <li>Familiarity with AI coding assistants is strongly recommended</li>
-                </ul>
-            </section>
-
-            <section id="schedule">
-                <h2>Schedule</h2>
-                <table class="schedule">
-                    <thead>
-                        <tr>
-                            <th>Week</th>
-                            <th>Topic</th>
-                            <th>Materials</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="week">Week 1<span class="date">Sep 10</span></td>
-                            <td><span class="topic">Introduction to Applied Machine Learning</span></td>
-                            <td class="materials">
-                                <a class="chip slides" href="materials/[COMS4995W30 AML] L1 - Introduction to Machine Learning.pdf" target="_blank">Slides</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="week">Week 2<span class="date">Sep 17</span></td>
-                            <td><span class="topic">Data Preparation and Feature Engineering</span></td>
-                            <td class="materials">
-                                <a class="chip slides" href="materials/[COMS4995W30 AML] L2 - Data.pdf" target="_blank">Slides</a>
-                                <a class="chip colab" href="https://colab.research.google.com/drive/1Dg0r5i_-ONC2hAf9MNMFox7_IB2UMCNH?usp=sharing" target="_blank">Colab</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="week">Week 3<span class="date">Sep 24</span></td>
-                            <td><span class="topic">Linear Models</span>
-                                <span class="case">Industry case: Why Linear Regression is still widely used in Ads (latency constraints)</span>
-                            </td>
-                            <td class="materials">
-                                <a class="chip slides" href="materials/[COMS4995W30 AML] L3 - Generative vs. Discriminative.pdf" target="_blank">Slides</a>
-                                <a class="chip colab" href="https://colab.research.google.com/drive/1ldh8WK3cu7fqw4rF2CpCUSWLeHsXjd46?usp=sharing" target="_blank">Colab</a>
-                                <a class="chip hw" href="materials/[COMS4995W30 AML] A1 - From Dirty Data to Predictive Models.pdf" target="_blank">Assignment 1</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="week">Week 4<span class="date">Oct 1</span></td>
-                            <td><span class="topic">Model Evaluation &amp; Bias-Variance</span>
-                                <span class="case">Focus: Beyond accuracy (precision, recall, AUC)</span>
-                            </td>
-                            <td class="materials">
-                                <a class="chip slides" href="materials/[COMS4995W30 AML] L4 - Model Evaluation &amp; Bias-Variance.pdf" target="_blank">Slides</a>
-                                <a class="chip colab" href="https://colab.research.google.com/drive/1GMf-9sIM4vCoA103nJIzrSNzD0WzgM_f?usp=sharing" target="_blank">Colab 1</a>
-                                <a class="chip colab" href="https://colab.research.google.com/drive/1l_DB7tkqgZ1_E41gscVWXHqgojIXKmxS?usp=sharing" target="_blank">Colab 2</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="week">Week 5<span class="date">Oct 8</span></td>
-                            <td><span class="topic">Tree-based Models &amp; Ensembles</span>
-                                <span class="case">Industry case: Why Trees outperform Neural Nets on tabular data</span>
-                            </td>
-                            <td class="materials">
-                                <a class="chip slides" href="materials/[COMS4995W30 AML] L5 - Tree Models &amp; Ensembles.pdf" target="_blank">Slides</a>
-                                <a class="chip colab" href="https://colab.research.google.com/drive/1Ajm0FAz-dm3-0jDawe4AiS1rH9srbYM8?usp=sharing" target="_blank">Colab</a>
-                            </td>
-                        </tr>
-                        <tr class="exam">
-                            <td class="week">Week 6<span class="date">Oct 15</span></td>
-                            <td><span class="topic">Midterm Exam</span></td>
-                            <td class="materials"><span class="none">—</span></td>
-                        </tr>
-                        <tr>
-                            <td class="week">Week 7<span class="date">Oct 22</span></td>
-                            <td><span class="topic">Neural Networks Fundamentals</span>
-                                <span class="assign">Assignment 2 out</span>
-                            </td>
-                            <td class="materials"><span class="none">—</span></td>
-                        </tr>
-                        <tr>
-                            <td class="week">Week 8<span class="date">Oct 29</span></td>
-                            <td><span class="topic">Transformers in Practice</span>
-                                <span class="case">Industry case: Long context with sparse Transformer</span>
-                            </td>
-                            <td class="materials"><span class="none">—</span></td>
-                        </tr>
-                        <tr>
-                            <td class="week">Week 9<span class="date">Nov 5</span></td>
-                            <td><span class="topic">Pre-training &amp; Supervised Fine-tuning</span></td>
-                            <td class="materials"><span class="none">—</span></td>
-                        </tr>
-                        <tr>
-                            <td class="week">Week 10<span class="date">Nov 12</span></td>
-                            <td><span class="topic">Reward and Retrieval for LLM</span>
-                                <span class="assign">Assignment 3 out</span>
-                            </td>
-                            <td class="materials"><span class="none">—</span></td>
-                        </tr>
-                        <tr>
-                            <td class="week">Week 11<span class="date">Nov 19</span></td>
-                            <td><span class="topic">LLM Agents &amp; Tool Use</span>
-                                <span class="case">Industry case: Autonomous loop failures, why agents get stuck and how to add guardrails</span>
-                            </td>
-                            <td class="materials"><span class="none">—</span></td>
-                        </tr>
-                        <tr class="off">
-                            <td class="week">&nbsp;<span class="date">Nov 26</span></td>
-                            <td><span class="topic">No class</span><span class="case">Thanksgiving holiday</span></td>
-                            <td class="materials"></td>
-                        </tr>
-                        <tr>
-                            <td class="week">Week 12<span class="date">Dec 3</span></td>
-                            <td><span class="topic">Course Review</span></td>
-                            <td class="materials"><span class="none">—</span></td>
-                        </tr>
-                        <tr class="off">
-                            <td class="week">&nbsp;<span class="date">Dec 10</span></td>
-                            <td><span class="topic">No lecture</span></td>
-                            <td class="materials"></td>
-                        </tr>
-                        <tr class="exam">
-                            <td class="week">Finals<span class="date">Dec 17</span></td>
-                            <td><span class="topic">Final Exam</span><span class="case">University final examination period</span></td>
-                            <td class="materials"><span class="none">—</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="grading">
-                <h2>Assignments &amp; Grading</h2>
-
-                <div class="grade-cards">
-                    <div class="card">
-                        <p class="pct">60%</p>
-                        <p class="name">Homework Assignments</p>
-                        <p>3 assignments on feature engineering, modeling, and evaluation. Submit a code repository
-                            and a short summary.</p>
-                    </div>
-                    <div class="card">
-                        <p class="pct">20%</p>
-                        <p class="name">Midterm Exam</p>
-                        <p>In class, closed book. Covers the first half of the course.</p>
-                    </div>
-                    <div class="card">
-                        <p class="pct">20%</p>
-                        <p class="name">Final Exam</p>
-                        <p>In class, closed book. Covers the second half and the course as a whole.</p>
-                    </div>
-                </div>
-
-                <h3>Rules</h3>
-                <dl class="rules">
-                    <div>
-                        <dt>Code</dt>
-                        <dd>Submit a runnable link (Colab, GitHub). <b>Screenshots of code receive a 0.</b></dd>
-                    </div>
-                    <div>
-                        <dt>Report</dt>
-                        <dd>A short write-up with visualizations and explanations, as specified in each assignment.
+<h3>What You Will Learn</h3>
+<ul>
+<li>Turn ambiguous business requirements into well-defined ML tasks</li>
+<li>Understand why models fail in production</li>
+<li>Build RAG systems, run supervised fine-tuning, design LLM agents</li>
+<li>Feature engineering, pipelines, and error analysis with scikit-learn</li>
+<li>Use AI coding assistants to ship production-ready code</li>
+</ul>
+<h3>Prerequisites</h3>
+<ul>
+<li>Python 3 with pandas, numpy, and pytorch</li>
+<li>Linear algebra and basic probability and statistics</li>
+<li>Familiarity with AI coding assistants is strongly recommended</li>
+</ul>
+</div></details></section>
+<section id="schedule">
+<h2>Schedule &amp; materials</h2>
+<table class="schedule">
+<thead>
+<tr>
+<th scope="col">Week</th>
+<th scope="col">Topic</th>
+<th scope="col">Materials</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="week">Week 1<span class="date">Sep 10</span></td>
+<td><span class="topic">Introduction to Applied Machine Learning</span></td>
+<td class="materials">
+<a class="chip slides" href="materials/%5BCOMS4995W30%20AML%5D%20L1%20-%20Introduction%20to%20Machine%20Learning.pdf" rel="noopener" target="_blank">Slides</a>
+</td>
+</tr>
+<tr>
+<td class="week">Week 2<span class="date">Sep 17</span></td>
+<td><span class="topic">Data Preparation and Feature Engineering</span></td>
+<td class="materials">
+<a class="chip slides" href="materials/%5BCOMS4995W30%20AML%5D%20L2%20-%20Data.pdf" rel="noopener" target="_blank">Slides</a>
+<a class="chip colab" href="https://colab.research.google.com/drive/1Dg0r5i_-ONC2hAf9MNMFox7_IB2UMCNH?usp=sharing" rel="noopener" target="_blank">Colab</a>
+</td>
+</tr>
+<tr>
+<td class="week">Week 3<span class="date">Sep 24</span></td>
+<td><span class="topic">Linear Models</span>
+<span class="case">Ads: linear models under latency constraints.</span>
+</td>
+<td class="materials">
+<a class="chip slides" href="materials/%5BCOMS4995W30%20AML%5D%20L3%20-%20Generative%20vs.%20Discriminative.pdf" rel="noopener" target="_blank">Slides</a>
+<a class="chip colab" href="https://colab.research.google.com/drive/1ldh8WK3cu7fqw4rF2CpCUSWLeHsXjd46?usp=sharing" rel="noopener" target="_blank">Colab</a>
+<a class="chip hw" href="materials/%5BCOMS4995W30%20AML%5D%20A1%20-%20From%20Dirty%20Data%20to%20Predictive%20Models.pdf" rel="noopener" target="_blank">Assignment 1</a>
+</td>
+</tr>
+<tr>
+<td class="week">Week 4<span class="date">Oct 1</span></td>
+<td><span class="topic">Model Evaluation &amp; Bias-Variance</span>
+<span class="case">Precision, recall and AUC.</span>
+</td>
+<td class="materials">
+<a class="chip slides" href="materials/%5BCOMS4995W30%20AML%5D%20L4%20-%20Model%20Evaluation%20&amp;%20Bias-Variance.pdf" rel="noopener" target="_blank">Slides</a>
+<a class="chip colab" href="https://colab.research.google.com/drive/1GMf-9sIM4vCoA103nJIzrSNzD0WzgM_f?usp=sharing" rel="noopener" target="_blank">Colab 1</a>
+<a class="chip colab" href="https://colab.research.google.com/drive/1l_DB7tkqgZ1_E41gscVWXHqgojIXKmxS?usp=sharing" rel="noopener" target="_blank">Colab 2</a>
+</td>
+</tr>
+<tr>
+<td class="week">Week 5<span class="date">Oct 8</span></td>
+<td><span class="topic">Tree-based Models &amp; Ensembles</span>
+<span class="case">Trees vs. neural nets on tabular data.</span>
+</td>
+<td class="materials">
+<a class="chip slides" href="materials/%5BCOMS4995W30%20AML%5D%20L5%20-%20Tree%20Models%20&amp;%20Ensembles.pdf" rel="noopener" target="_blank">Slides</a>
+<a class="chip colab" href="https://colab.research.google.com/drive/1Ajm0FAz-dm3-0jDawe4AiS1rH9srbYM8?usp=sharing" rel="noopener" target="_blank">Colab</a>
+</td>
+</tr>
+<tr class="exam">
+<td class="week">Week 6<span class="date">Oct 15</span></td>
+<td><span class="topic">Midterm Exam</span></td>
+<td class="materials"><span class="none">—</span></td>
+</tr>
+<tr>
+<td class="week">Week 7<span class="date">Oct 22</span></td>
+<td><span class="topic">Neural Networks Fundamentals</span>
+<span class="assign">Assignment 2 out</span>
+</td>
+<td class="materials"><span class="none">—</span></td>
+</tr>
+<tr>
+<td class="week">Week 8<span class="date">Oct 29</span></td>
+<td><span class="topic">Transformers in Practice</span>
+<span class="case">Long contexts with sparse Transformers.</span>
+</td>
+<td class="materials"><span class="none">—</span></td>
+</tr>
+<tr>
+<td class="week">Week 9<span class="date">Nov 5</span></td>
+<td><span class="topic">Pre-training &amp; Supervised Fine-tuning</span></td>
+<td class="materials"><span class="none">—</span></td>
+</tr>
+<tr>
+<td class="week">Week 10<span class="date">Nov 12</span></td>
+<td><span class="topic">Reward and Retrieval for LLM</span>
+<span class="assign">Assignment 3 out</span>
+</td>
+<td class="materials"><span class="none">—</span></td>
+</tr>
+<tr>
+<td class="week">Week 11<span class="date">Nov 19</span></td>
+<td><span class="topic">LLM Agents &amp; Tool Use</span>
+<span class="case">Agent failures and guardrails.</span>
+</td>
+<td class="materials"><span class="none">—</span></td>
+</tr>
+<tr class="off">
+<td class="week"> <span class="date">Nov 26</span></td>
+<td><span class="topic">No class</span><span class="case">Thanksgiving holiday</span></td>
+<td class="materials"></td>
+</tr>
+<tr>
+<td class="week">Week 12<span class="date">Dec 3</span></td>
+<td><span class="topic">Course Review</span></td>
+<td class="materials"><span class="none">—</span></td>
+</tr>
+<tr class="off">
+<td class="week"> <span class="date">Dec 10</span></td>
+<td><span class="topic">No lecture</span></td>
+<td class="materials"></td>
+</tr>
+<tr class="exam">
+<td class="week">Finals<span class="date">Dec 17</span></td>
+<td><span class="topic">Final Exam</span><span class="case">University final examination period</span></td>
+<td class="materials"><span class="none">—</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="grading">
+<h2>Grading</h2>
+<div class="grade-cards">
+<div class="card">
+<p class="pct">60%</p>
+<p class="name">Homework</p>
+<p>3 assignments; code + report.</p>
+</div>
+<div class="card">
+<p class="pct">20%</p>
+<p class="name">Midterm</p>
+<p>Oct 15, closed book.</p>
+</div>
+<div class="card">
+<p class="pct">20%</p>
+<p class="name">Final</p>
+<p>Dec 17, closed book.</p>
+</div>
+</div>
+<details class="course-disclosure" id="grading-rules"><summary>Submission &amp; exam rules</summary><div class="disclosure-body"><dl class="rules compact"><div><dt>Homework</dt><dd>3 assignments on feature engineering, modeling, and evaluation. Submit a code repository
+                            and a short summary.</dd></div><div><dt>Midterm</dt><dd>In class, closed book. Covers the first half of the course.</dd></div><div><dt>Final</dt><dd>In class, closed book. Covers the second half and the course as a whole.</dd></div></dl><dl class="rules">
+<div>
+<dt>Code</dt>
+<dd>Submit a runnable link (Colab, GitHub). <b>Screenshots of code receive a 0.</b></dd>
+</div>
+<div>
+<dt>Report</dt>
+<dd>A short write-up with visualizations and explanations, as specified in each assignment.
                         </dd>
-                    </div>
-                    <div>
-                        <dt>AI Tools</dt>
-                        <dd>Fully permitted for code and writing. You are responsible for the final output being
+</div>
+<div>
+<dt>AI Tools</dt>
+<dd>Fully permitted for code and writing. You are responsible for the final output being
                             correct and runnable.</dd>
-                    </div>
-                    <div>
-                        <dt>Curve</dt>
-                        <dd>Letter grades are relative to the class distribution. No fixed percentage cutoffs.
+</div>
+<div>
+<dt>Curve</dt>
+<dd>Letter grades are relative to the class distribution. No fixed percentage cutoffs.
                             Numerical scores are rounded to the nearest whole number first.</dd>
-                    </div>
-                    <div>
-                        <dt>Exam Scope</dt>
-                        <dd>Everything covered: lectures, slides, whiteboard discussions, homework, readings, code,
+</div>
+<div>
+<dt>Exam Scope</dt>
+<dd>Everything covered: lectures, slides, whiteboard discussions, homework, readings, code,
                             case studies, guest content, Ed posts. Exams test engineering intuition and system design
                             thinking, not memorization.</dd>
-                    </div>
-                </dl>
-            </section>
-
-            <section id="policies">
-                <h2>Course Policies</h2>
-                <p>Highlights only. The <a href="materials/[COMS4995W030 AML Fall26] Syllabus.pdf"
-                        target="_blank">syllabus</a> is the complete and authoritative version.</p>
-                <dl class="rules compact">
-                    <div>
-                        <dt>Attendance</dt>
-                        <dd>Optional, not graded. Lectures streamed and recorded on a best-effort basis.</dd>
-                    </div>
-                    <div>
-                        <dt>Late Work</dt>
-                        <dd>Up to 24 h late at 10% off, then 0. Emergencies: email the instructor beforehand.</dd>
-                    </div>
-                    <div>
-                        <dt>Missed Exams</dt>
-                        <dd>Email the instructor before the exam, with documentation. Unexcused is a 0.</dd>
-                    </div>
-                    <div>
-                        <dt>Regrades</dt>
-                        <dd>In writing to the TAs within 1 week. Full review; the score can go up or down.</dd>
-                    </div>
-                    <div>
-                        <dt>AI Tools</dt>
-                        <dd>Permitted everywhere. You own the result and must be able to explain your code.</dd>
-                    </div>
-                    <div>
-                        <dt>Accessibility</dt>
-                        <dd>ODS-certified students: contact <a href="mailto:rk3281@columbia.edu">Robert Kramer</a>,
+</div>
+</dl></div></details></section>
+<section id="policies">
+<h2>Policies</h2>
+<p class="policy-brief"><strong>Late work: </strong>10% off within 24 hours; after that, 0. For emergencies, email the instructor beforehand.</p><p>Full requirements are in the <a href="materials/%5BCOMS4995W030%20AML%20Fall26%5D%20Syllabus.pdf" rel="noopener" target="_blank">syllabus</a>.</p>
+<details class="course-disclosure" id="policy-details"><summary>All course policies</summary><div class="disclosure-body"><dl class="rules compact">
+<div>
+<dt>Attendance</dt>
+<dd>Optional, not graded. Lectures streamed and recorded on a best-effort basis.</dd>
+</div>
+<div>
+<dt>Late Work</dt>
+<dd>Up to 24 h late at 10% off, then 0. Emergencies: email the instructor beforehand.</dd>
+</div>
+<div>
+<dt>Missed Exams</dt>
+<dd>Email the instructor before the exam, with documentation. Unexcused is a 0.</dd>
+</div>
+<div>
+<dt>Regrades</dt>
+<dd>In writing to the TAs within 1 week. Full review; the score can go up or down.</dd>
+</div>
+<div>
+<dt>AI Tools</dt>
+<dd>Permitted everywhere. You own the result and must be able to explain your code.</dd>
+</div>
+<div>
+<dt>Accessibility</dt>
+<dd>ODS-certified students: contact <a href="mailto:rk3281@columbia.edu">Robert Kramer</a>,
                             then notify the TAs.</dd>
-                    </div>
-                    <div>
-                        <dt>Communication</dt>
-                        <dd>Ed for all questions. Email only for extensions, exam absences, and personal matters.</dd>
-                    </div>
-                </dl>
-            </section>
+</div>
+<div>
+<dt>Communication</dt>
+<dd>Ed for all questions. Email only for extensions, exam absences, and personal matters.</dd>
+</div>
+</dl></div></details></section>
+</div>
+<aside class="side">
+<div class="card" id="office-hours"><span aria-hidden="true" class="anchor-alias" id="ta-contacts"></span><span aria-hidden="true" class="anchor-alias" id="staff"></span>
+<h4>Office Hours</h4>
+<ul class="oh">
+<li><a aria-label="Email Kuan-Ting Chen" class="who" href="mailto:kc3953@columbia.edu">Kuan-Ting Chen</a><span class="day">Mon 4:00–6:00 PM</span></li>
+<li><a aria-label="Email Byeolah Kwon" class="who" href="mailto:bk2833@columbia.edu">Byeolah Kwon</a><span class="day">Tue 2:00–4:00 PM</span></li>
+<li><a aria-label="Email Zoga Duka" class="who" href="mailto:zd2377@columbia.edu">Zoga Duka</a><span class="day">Wed 4:00–6:00 PM</span></li>
+<li><a aria-label="Email Prajwal Raghunath" class="who" href="mailto:pr2789@columbia.edu">Prajwal Raghunath</a><span class="day">Fri 2:00–4:00 PM</span></li>
+</ul>
+<p class="fine">Location: DSI lounge.<br/>Ping the TA by email or on Ed first to set up a time.</p>
+</div>
+<div class="card" id="resources">
+<details class="course-disclosure" id="book-list"><summary>Recommended books</summary><div class="disclosure-body"><ul>
+<li>
+<a href="https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/" rel="noopener" target="_blank">Designing Machine Learning Systems</a>
+<span class="meta">Chip Huyen</span>
+</li>
+<li>
+<a href="https://www.manning.com/books/build-a-large-language-model-from-scratch" rel="noopener" target="_blank">Build a Large Language Model (From Scratch)</a>
+<span class="meta">Sebastian Raschka</span>
+</li>
+</ul></div></details></div>
+</aside>
+</main>
+<footer>
+<div class="wrap">
+<p>COMS 4995 Applied Machine Learning · © Columbia University</p>
+</div>
+</footer>
+<script>(() => {
+  const metadata = JSON.parse(document.querySelector('script[type="application/ld+json"]').textContent);
+  const year = metadata.hasCourseInstance.startDate.slice(0, 4);
+  const months = {Jan:'01',Feb:'02',Mar:'03',Apr:'04',May:'05',Jun:'06',Jul:'07',Aug:'08',Sep:'09',Oct:'10',Nov:'11',Dec:'12'};
+  const sessions = [...document.querySelectorAll('.schedule tbody tr')].map(row => {
+    const label = row.querySelector('.date').textContent.trim();
+    const [month, day] = label.split(/\s+/);
+    const date = `${year}-${months[month]}-${day.padStart(2, '0')}`;
+    row.id ||= `class-${date}`;
+    return {row, label, date, off:row.classList.contains('off'), title:row.querySelector('.topic').textContent.trim()};
+  });
+  const dateParts = new Intl.DateTimeFormat('en-US', {timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+  const parts = Object.fromEntries(dateParts.map(part => [part.type,part.value]));
+  const today = `${parts.year}-${parts.month}-${parts.day}`;
+  const next = sessions.find(session => session.date >= today);
+  const latest = sessions.filter(session => session.date <= today && session.row.querySelector('.materials a')).at(-1);
+  const panel = document.querySelector('.term-update');
+  const target = panel.querySelector('.update-target');
+  if (next) {
+    const label = next.off ? 'Upcoming break' : next.date === today ? 'Today’s class' : 'Next class';
+    panel.querySelector('.update-next .update-label').textContent = label;
+    target.textContent = `${next.label}: ${next.title}`;
+    target.href = `#${next.row.id}`;
+    next.row.classList.add('is-next');
+    next.row.setAttribute('aria-current', 'date');
+    const badge = document.createElement('span');
+    badge.className = 'next-label';
+    badge.textContent = label;
+    next.row.querySelector('.week').append(badge);
+  } else {
+    panel.querySelector('.update-next .update-label').textContent = 'Semester complete';
+    target.textContent = 'Browse course materials';
+    target.href = '#schedule';
+  }
+  if (latest) {
+    panel.querySelector('.update-recent .update-label').textContent = `Latest materials · ${latest.label}`;
+    latest.row.querySelectorAll('.materials a').forEach(source => {
+      const link = source.cloneNode(true);
+      link.removeAttribute('class');
+      panel.querySelector('.update-materials').append(link);
+    });
+  } else {
+    panel.querySelector('.update-recent').hidden = true;
+  }
+  panel.hidden = false;
 
-        </div>
-
-        <aside class="side">
-            <div class="card">
-                <h4>Important Dates</h4>
-                <ul>
-                    <li class="row"><span>First Lecture</span><span class="meta">Sep 10</span></li>
-                    <li class="row"><span>Midterm Exam</span><span class="meta">Oct 15</span></li>
-                    <li class="row"><span>No Class (Thanksgiving)</span><span class="meta">Nov 26</span></li>
-                    <li class="row"><span>Final Exam</span><span class="meta">Dec 17</span></li>
-                </ul>
-            </div>
-
-            <div class="card tint">
-                <h4>From the Instructor</h4>
-                <p>This course is built to get you hired. Some rules are strict; that is preparation, not
-                    punishment. Make your mistakes here, not in interviews.</p>
-                <p>The TAs and I are on your side. Use Ed and office hours, early and often.</p>
-            </div>
-
-            <div class="card" id="staff">
-                <h4>Instructor</h4>
-                <ul>
-                    <li>
-                        <span class="who">Dr. Spencer W. Luo</span>
-                        <span class="meta"><a href="mailto:swl2145@columbia.edu">swl2145@columbia.edu</a></span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h4>Teaching Assistants</h4>
-                <ul>
-                    <li>
-                        <span class="who">Zoga Duka</span>
-                        <span class="meta"><a href="mailto:zd2377@columbia.edu">zd2377@columbia.edu</a></span>
-                    </li>
-                    <li>
-                        <span class="who">Prajwal Raghunath</span>
-                        <span class="meta"><a href="mailto:pr2789@columbia.edu">pr2789@columbia.edu</a></span>
-                    </li>
-                    <li>
-                        <span class="who">Byeolah Kwon</span>
-                        <span class="meta"><a href="mailto:bk2833@columbia.edu">bk2833@columbia.edu</a></span>
-                    </li>
-                    <li>
-                        <span class="who">Kuan-Ting Chen</span>
-                        <span class="meta"><a href="mailto:kc3953@columbia.edu">kc3953@columbia.edu</a></span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h4>Office Hours</h4>
-                <ul class="oh">
-                    <li><span class="who">Kuan-Ting Chen</span><span class="day">Mon 4:00–6:00 PM</span></li>
-                    <li><span class="who">Byeolah Kwon</span><span class="day">Tue 2:00–4:00 PM</span></li>
-                    <li><span class="who">Zoga Duka</span><span class="day">Wed 4:00–6:00 PM</span></li>
-                    <li><span class="who">Prajwal Raghunath</span><span class="day">Fri 2:00–4:00 PM</span></li>
-                </ul>
-                <p class="fine">Location: DSI lounge.<br>Ping the TA by email or on Ed first to set up a time.</p>
-            </div>
-
-
-            <div class="card" id="resources">
-                <h4>Recommended Textbooks</h4>
-                <ul>
-                    <li>
-                        <a href="https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/"
-                            target="_blank">Designing Machine Learning Systems</a>
-                        <span class="meta">Chip Huyen</span>
-                    </li>
-                    <li>
-                        <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch"
-                            target="_blank">Build a Large Language Model (From Scratch)</a>
-                        <span class="meta">Sebastian Raschka</span>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-    </main>
-
-    <footer>
-        <div class="wrap">
-            <p>COMS 4995 Applied Machine Learning · &copy; Columbia University</p>
-        </div>
-    </footer>
-</body>
-
+  const links = [...document.querySelectorAll('.subnav a')];
+  const targets = links.map(link => document.querySelector(link.hash));
+  let requested = links.findIndex(link => link.hash === location.hash);
+  let pending = false;
+  function update() {
+    const threshold = Math.max(document.querySelector('.subnav').offsetHeight + 18, 68);
+    const eligible = targets.map((element,index) => ({index,bounds:element.getBoundingClientRect()}));
+    let active = 0;
+    // The sidebar and main column overlap vertically. Main sections drive scroll
+    // highlighting; sidebar destinations are selected explicitly by navigation.
+    eligible.filter(item => targets[item.index].closest('.main')).forEach(item => {
+      if (item.bounds.top <= threshold) active = item.index;
+    });
+    if (requested >= 0) {
+      const bounds = eligible[requested].bounds;
+      if (bounds.top < innerHeight && bounds.bottom > threshold) active = requested;
+    }
+    links.forEach((link,index) => {
+      if (index === active) link.setAttribute('aria-current','location');
+      else link.removeAttribute('aria-current');
+    });
+    pending = false;
+  }
+  function queue() { if (!pending) {pending=true; requestAnimationFrame(update);} }
+  function release() {requested=-1;queue();}
+  links.forEach((link,index) => link.addEventListener('click', () => {requested=index;queue();}));
+  window.addEventListener('hashchange', () => {
+    requested=links.findIndex(link => link.hash===location.hash);
+    queue();
+  });
+  window.addEventListener('scroll',queue,{passive:true});
+  window.addEventListener('resize',queue);
+  window.addEventListener('wheel',release,{passive:true});
+  window.addEventListener('touchmove',release,{passive:true});
+  window.addEventListener('keydown',event=>{
+    if(['ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' '].includes(event.key)) release();
+  });
+  document.fonts.ready.then(update);
+  update();
+})();
+</script><script>(() => {
+  // Keep the material date on a deliberate second line on small screens.
+  const materialLabel = document.querySelector('.update-recent .update-label');
+  const labelParts = materialLabel?.textContent.split(' · ');
+  if (labelParts?.length === 2) {
+    const separator = document.createElement('span');
+    separator.className = 'update-label-separator';
+    separator.textContent = ' · ';
+    const date = document.createElement('span');
+    date.className = 'update-material-date';
+    date.textContent = labelParts[1];
+    materialLabel.replaceChildren(labelParts[0], separator, date);
+  }
+  const disclosures = [...document.querySelectorAll('.course-disclosure')];
+  function revealTarget() {
+    const target = document.getElementById(location.hash.slice(1));
+    if (!target) return;
+    let ancestor = target;
+    while (ancestor) {
+      if (ancestor instanceof HTMLDetailsElement) ancestor.open = true;
+      ancestor = ancestor.parentElement;
+    }
+    // Preserve older bookmarks to the books section as well as direct details links.
+    if (target.id === 'resources') target.querySelector('details').open = true;
+    requestAnimationFrame(() => target.scrollIntoView());
+  }
+  window.addEventListener('hashchange', revealTarget);
+  revealTarget();
+  disclosures.forEach(detail => detail.addEventListener('toggle', () => window.dispatchEvent(new Event('resize'))));
+  let previousStates;
+  window.addEventListener('beforeprint', () => {
+    if (previousStates) return;
+    previousStates = disclosures.map(detail => detail.open);
+    disclosures.forEach(detail => { detail.open = true; });
+  });
+  window.addEventListener('afterprint', () => {
+    if (!previousStates) return;
+    disclosures.forEach((detail, i) => { detail.open = previousStates[i]; });
+    previousStates = undefined;
+  });
+})();
+</script></body>
 </html>
