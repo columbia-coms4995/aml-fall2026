@@ -1161,7 +1161,7 @@ h2 { font-size: 26px; margin-bottom: 16px; padding-bottom: 0; border-bottom: 0; 
 </tr>
 <tr class="exam">
 <td class="week">Finals<span class="date">Dec 17</span></td>
-<td><span class="topic">Final Exam</span><span class="case">University final examination period</span></td>
+<td><span class="topic">Final Exam</span></td>
 <td class="materials"><span class="none">—</span></td>
 </tr>
 </tbody>
@@ -1313,7 +1313,8 @@ h2 { font-size: 26px; margin-bottom: 16px; padding-bottom: 0; border-bottom: 0; 
     target.href = '#schedule';
   }
   if (latest) {
-    const materialsHeading = latest.row.classList.contains('exam') ? latest.title.replace(/ Exam$/, '') : 'Latest materials';
+    // Derive the heading from the same session as its date and material links.
+    const materialsHeading = latest.title.replace(/ Exam$/, '');
     panel.querySelector('.update-recent .update-label').textContent = `${materialsHeading} · ${latest.label}`;
     latest.row.querySelectorAll('.materials a').forEach(source => {
       const link = source.cloneNode(true);
