@@ -59,7 +59,7 @@
             --columbia: #b9d9eb;
             --columbia-mid: #a2cbe6;
             --sky: #e9f3fa;
-            --exam-bg: #fff5df;
+            --exam-bg: #fffbf3;
             --text: #1b2430;
             --text-2: #4b5563;
             --text-3: #6b7280;
@@ -837,6 +837,7 @@ dl.rules > div { font-size: 16px; }
 .update-next, .update-recent { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
 .update-label { font-size: 15px; color: #536273; }
 .update-target { font-size: 17px; font-weight: 600; color: var(--navy); }
+.update-material-content { display: grid; gap: 3px; min-width: 0; }
 .update-materials { display: flex; flex-wrap: wrap; gap: 6px 16px; }
 .update-materials a { font-size: 16px; font-weight: 600; }
 .update-office { white-space: nowrap; font-size: 16px; }
@@ -1020,7 +1021,19 @@ h2 { font-size: 26px; margin-bottom: 16px; padding-bottom: 0; border-bottom: 0; 
 <div class="wrap">
 <ul><li><a href="#schedule">Schedule</a></li><li><a href="#grading">Grading</a></li><li><a href="#policies">Policies</a></li><li><a href="#office-hours">Help</a></li></ul>
 </div>
-</nav><aside aria-label="Current course information" class="term-update" hidden=""><div class="wrap"><div class="update-next"><span class="update-label">Next class</span><a class="update-target" href="#schedule"></a></div><div class="update-recent"><span class="update-label">Latest materials</span><span class="update-materials"></span></div></div></aside>
+</nav>
+<aside aria-label="Current course information" class="term-update" hidden="">
+<div class="wrap">
+<div class="update-next"><span class="update-label"></span><a class="update-target" href="#schedule"></a></div>
+<div class="update-recent">
+<span class="update-label"></span>
+<div class="update-material-content">
+<span class="update-target update-material-title"></span>
+<span class="update-materials"></span>
+</div>
+</div>
+</div>
+</aside>
 <main class="wrap layout">
 <div class="main">
 <section id="overview"><h2 class="visually-hidden">About the course</h2><aside aria-labelledby="instructor-note-title" class="instructor-note"><h3 id="instructor-note-title">We’re here to help you succeed.</h3><p>Build skills for interviews and real ML work. Ask questions, make mistakes, and learn.</p><p>The TAs and I are on your side.</p></aside><details class="course-disclosure" id="course-details"><summary>Course details &amp; prerequisites</summary><div class="disclosure-body">
@@ -1287,7 +1300,8 @@ h2 { font-size: 26px; margin-bottom: 16px; padding-bottom: 0; border-bottom: 0; 
     const [month, day] = label.split(/\s+/);
     const date = `${year}-${months[month]}-${day.padStart(2, '0')}`;
     row.id ||= `class-${date}`;
-    return {row, label, date, off:row.classList.contains('off'), title:row.querySelector('.topic').textContent.trim()};
+    const kind = row.classList.contains('exam') ? 'exam' : 'class';
+    return {row, label, date, kind, off:row.classList.contains('off'), title:row.querySelector('.topic').textContent.trim()};
   });
   const dateParts = new Intl.DateTimeFormat('en-US', {timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
   const parts = Object.fromEntries(dateParts.map(part => [part.type,part.value]));
@@ -1295,9 +1309,9 @@ h2 { font-size: 26px; margin-bottom: 16px; padding-bottom: 0; border-bottom: 0; 
   const next = sessions.find(session => session.date >= today);
   const latest = sessions.filter(session => session.date <= today && session.row.querySelector('.materials a')).at(-1);
   const panel = document.querySelector('.term-update');
-  const target = panel.querySelector('.update-target');
+  const target = panel.querySelector('.update-next .update-target');
   if (next) {
-    const label = next.off ? 'Upcoming break' : next.date === today ? 'Today’s class' : 'Next class';
+    const label = next.off ? 'Upcoming break' : next.date === today ? `Today’s ${next.kind}` : `Next ${next.kind}`;
     panel.querySelector('.update-next .update-label').textContent = label;
     target.textContent = `${next.label}: ${next.title}`;
     target.href = `#${next.row.id}`;
@@ -1313,9 +1327,10 @@ h2 { font-size: 26px; margin-bottom: 16px; padding-bottom: 0; border-bottom: 0; 
     target.href = '#schedule';
   }
   if (latest) {
-    // Derive the heading from the same session as its date and material links.
-    const materialsHeading = latest.title.replace(/ Exam$/, '');
-    panel.querySelector('.update-recent .update-label').textContent = `${materialsHeading} · ${latest.label}`;
+    // Keep timing explicit and derive the title, date, and links from one session.
+    const materialsStatus = `${latest.date === today ? 'Today’s' : 'Past'} ${latest.kind}`;
+    panel.querySelector('.update-recent .update-label').textContent = `${materialsStatus} · ${latest.label}`;
+    panel.querySelector('.update-material-title').textContent = latest.title.replace(/ Exam$/, '');
     latest.row.querySelectorAll('.materials a').forEach(source => {
       const link = source.cloneNode(true);
       link.removeAttribute('class');
