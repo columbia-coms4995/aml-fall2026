@@ -59,6 +59,7 @@
             --columbia: #b9d9eb;
             --columbia-mid: #a2cbe6;
             --sky: #e9f3fa;
+            --exam-bg: #fff5df;
             --text: #1b2430;
             --text-2: #4b5563;
             --text-3: #6b7280;
@@ -513,7 +514,7 @@
         }
 
         .schedule tr.exam td {
-            background: var(--sky);
+            background: var(--exam-bg);
         }
 
         /* Grading */
@@ -786,7 +787,7 @@
             }
 
             .schedule tr.exam {
-                background: var(--sky);
+                background: var(--exam-bg);
             }
 
             .schedule tr.exam td {
@@ -840,7 +841,7 @@ dl.rules > div { font-size: 16px; }
 .update-materials a { font-size: 16px; font-weight: 600; }
 .update-office { white-space: nowrap; font-size: 16px; }
 .term-update a { text-decoration: underline; text-underline-offset: .2em; }
-.schedule tr.is-next td { background: #e5f1f9; }
+.schedule tr.is-next:not(.exam):not(.off) td { background: #e5f1f9; }
 .schedule tr.is-next td:first-child { box-shadow: inset 3px 0 var(--blue); }
 .next-label { display: block; font-size: 14px; font-weight: 600; color: var(--blue); line-height: 1.35; margin-top: 4px; letter-spacing: 0; text-transform: none; }
 .schedule tr:target { outline: 2px solid var(--blue); outline-offset: -2px; }
@@ -867,8 +868,9 @@ dl.rules > div { font-size: 16px; }
   .schedule .week .date { font-size: 14px; }
   .schedule .materials { width: 100%; flex-direction: row; gap: 6px; }
   .schedule .chip { margin: 0; }
-  .schedule tr.is-next { background: #e5f1f9; box-shadow: inset 3px 0 var(--blue); }
-  .schedule tr.is-next td { background: transparent; }
+  .schedule tr.is-next { box-shadow: inset 3px 0 var(--blue); }
+  .schedule tr.is-next:not(.exam):not(.off) { background: #e5f1f9; }
+  .schedule tr.is-next:not(.exam):not(.off) td { background: transparent; }
   .schedule tr.is-next td:first-child { box-shadow: none; }
   .next-label { display: inline; margin-left: 10px; }
   .side { display: block; }
