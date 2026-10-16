@@ -1313,7 +1313,8 @@ h2 { font-size: 26px; margin-bottom: 16px; padding-bottom: 0; border-bottom: 0; 
     target.href = '#schedule';
   }
   if (latest) {
-    panel.querySelector('.update-recent .update-label').textContent = `Latest materials · ${latest.label}`;
+    const materialsHeading = latest.row.classList.contains('exam') ? latest.title.replace(/ Exam$/, '') : 'Latest materials';
+    panel.querySelector('.update-recent .update-label').textContent = `${materialsHeading} · ${latest.label}`;
     latest.row.querySelectorAll('.materials a').forEach(source => {
       const link = source.cloneNode(true);
       link.removeAttribute('class');
