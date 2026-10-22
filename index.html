@@ -1310,7 +1310,7 @@ h2 { font-size: 26px; margin-bottom: 16px; padding-bottom: 0; border-bottom: 0; 
   const parts = Object.fromEntries(dateParts.map(part => [part.type,part.value]));
   const today = `${parts.year}-${parts.month}-${parts.day}`;
   const next = sessions.find(session => session.date >= today);
-  const latest = sessions.filter(session => session.date <= today && session.row.querySelector('.materials a')).at(-1);
+  const latest = sessions.filter(session => session.date < today && session.row.querySelector('.materials a')).at(-1);
   const panel = document.querySelector('.term-update');
   const target = panel.querySelector('.update-next .update-target');
   if (next) {
@@ -1331,7 +1331,7 @@ h2 { font-size: 26px; margin-bottom: 16px; padding-bottom: 0; border-bottom: 0; 
   }
   if (latest) {
     // Keep timing explicit and derive the title, date, and links from one session.
-    const materialsStatus = `${latest.date === today ? 'Today’s' : 'Past'} ${latest.kind}`;
+    const materialsStatus = `Past ${latest.kind}`;
     panel.querySelector('.update-recent .update-label').textContent = `${materialsStatus} · ${latest.label}`;
     panel.querySelector('.update-material-title').textContent = latest.title.replace(/ Exam$/, '');
     latest.row.querySelectorAll('.materials a').forEach(source => {
