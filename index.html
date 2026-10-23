@@ -1139,26 +1139,43 @@ h2 { font-size: 26px; margin-bottom: 16px; padding-bottom: 0; border-bottom: 0; 
 <td><span class="topic">Transformers in Practice</span>
 <span class="case">Long contexts with sparse Transformers.</span>
 </td>
-<td class="materials"><span class="none">—</span></td>
+<td class="materials"><span class="none">—</span>
+<template data-release-date="2026-10-28">
+<a class="chip slides" href="materials/%5BCOMS4995W30%20AML%5D%20L8%20-%20Transformers%20in%20Practice.pdf" rel="noopener" target="_blank">Slides</a>
+<a class="chip colab" href="https://colab.research.google.com/drive/1zvnprL4V7rLrTe-lFyea3eGEiL8stgmt" rel="noopener" target="_blank">Colab</a>
+</template>
+</td>
 </tr>
 <tr>
 <td class="week">Week 9<span class="date">Nov 5</span></td>
 <td><span class="topic">Pre-training &amp; Supervised Fine-tuning</span></td>
-<td class="materials"><span class="none">—</span></td>
+<td class="materials"><span class="none">—</span>
+<template data-release-date="2026-11-04">
+<a class="chip slides" href="materials/%5BCOMS4995W30%20AML%5D%20L9%20-%20LLM%20Pre-training%20%26%20Fine-tuning%20Paradigm.pdf" rel="noopener" target="_blank">Slides</a>
+</template>
+</td>
 </tr>
 <tr>
 <td class="week">Week 10<span class="date">Nov 12</span></td>
 <td><span class="topic">Reward and Retrieval for LLM</span>
 <span class="assign">Assignment 3 out</span>
 </td>
-<td class="materials"><span class="none">—</span></td>
+<td class="materials"><span class="none">—</span>
+<template data-release-date="2026-11-11">
+<a class="chip slides" href="materials/%5BCOMS4995W30%20AML%5D%20L10%20-%20Rewards%20%26%20Retrieval%20for%20LLM.pdf" rel="noopener" target="_blank">Slides</a>
+</template>
+</td>
 </tr>
 <tr>
 <td class="week">Week 11<span class="date">Nov 19</span></td>
 <td><span class="topic">LLM Agents &amp; Tool Use</span>
 <span class="case">Agent failures and guardrails.</span>
 </td>
-<td class="materials"><span class="none">—</span></td>
+<td class="materials"><span class="none">—</span>
+<template data-release-date="2026-11-18">
+<a class="chip slides" href="materials/%5BCOMS4995W30%20AML%5D%20L11%20-%20LLM%20Agents%3A%20From%20Reasoning%20to%20Action.pdf" rel="noopener" target="_blank">Slides</a>
+</template>
+</td>
 </tr>
 <tr class="off">
 <td class="week"> <span class="date">Nov 26</span></td>
@@ -1168,7 +1185,11 @@ h2 { font-size: 26px; margin-bottom: 16px; padding-bottom: 0; border-bottom: 0; 
 <tr>
 <td class="week">Week 12<span class="date">Dec 3</span></td>
 <td><span class="topic">Course Review</span></td>
-<td class="materials"><span class="none">—</span></td>
+<td class="materials"><span class="none">—</span>
+<template data-release-date="2026-12-02">
+<a class="chip slides" href="materials/%5BCOMS4995W30%20AML%5D%20L12%20-%20Review.pdf" rel="noopener" target="_blank">Slides</a>
+</template>
+</td>
 </tr>
 <tr class="off">
 <td class="week"> <span class="date">Dec 10</span></td>
@@ -1306,9 +1327,32 @@ h2 { font-size: 26px; margin-bottom: 16px; padding-bottom: 0; border-bottom: 0; 
     const kind = row.classList.contains('exam') ? 'exam' : 'class';
     return {row, label, date, kind, off:row.classList.contains('off'), title:row.querySelector('.topic').textContent.trim()};
   });
-  const dateParts = new Intl.DateTimeFormat('en-US', {timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
-  const parts = Object.fromEntries(dateParts.map(part => [part.type,part.value]));
-  const today = `${parts.year}-${parts.month}-${parts.day}`;
+  const courseDate = new Intl.DateTimeFormat('en-US', {timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'});
+  function newYorkDate() {
+    const parts = Object.fromEntries(courseDate.formatToParts(new Date()).map(part => [part.type,part.value]));
+    return `${parts.year}-${parts.month}-${parts.day}`;
+  }
+  // Templates keep future links out of the rendered page until Wednesday in New York.
+  // The uploaded files are public; this controls visibility, not access permissions.
+  const scheduledMaterials = [...document.querySelectorAll('template[data-release-date]')];
+  let releaseTimer;
+  function releaseMaterials() {
+    const date = newYorkDate();
+    scheduledMaterials.forEach(template => {
+      if (template.isConnected && template.dataset.releaseDate <= date) {
+        template.parentElement.querySelector('.none')?.remove();
+        template.replaceWith(template.content);
+      }
+    });
+    if (!scheduledMaterials.some(template => template.isConnected)) clearInterval(releaseTimer);
+  }
+  releaseMaterials();
+  if (scheduledMaterials.some(template => template.isConnected)) {
+    releaseTimer = setInterval(releaseMaterials, 30000);
+    window.addEventListener('pageshow', releaseMaterials);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) releaseMaterials(); });
+  }
+  const today = newYorkDate();
   const next = sessions.find(session => session.date >= today);
   const latest = sessions.filter(session => session.date < today && session.row.querySelector('.materials a')).at(-1);
   const panel = document.querySelector('.term-update');
