@@ -30,7 +30,7 @@ errors = []
 def check_links(page, released):
     for week, _, date in RELEASES:
         links = page.locator(f'#class-{date} .materials a')
-        expected = (2 if week == 8 else 1) if week in released else 0
+        expected = (2 if week in {8, 10} else 1) if week in released else 0
         assert links.count() == expected, (week, released, links.count())
         for link in links.all():
             assert link.is_visible(), (week, 'link is hidden after release')
