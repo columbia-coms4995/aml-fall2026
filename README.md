@@ -13,7 +13,6 @@ at midnight in `America/New_York` on the Wednesday before class:
 | L8 | October 28, 2026 |
 | L9 | November 4, 2026 |
 | L10 | November 11, 2026 |
-| L11 | November 18, 2026 |
 | L12 | December 2, 2026 |
 
 The page uses the visitor's clock, converted to New York time, including daylight

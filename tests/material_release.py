@@ -20,7 +20,6 @@ RELEASES = [
     (8, '2026-10-28T04:00:00+00:00', '2026-10-29'),
     (9, '2026-11-04T05:00:00+00:00', '2026-11-05'),
     (10, '2026-11-11T05:00:00+00:00', '2026-11-12'),
-    (11, '2026-11-18T05:00:00+00:00', '2026-11-19'),
     (12, '2026-12-02T05:00:00+00:00', '2026-12-03'),
 ]
 checks = []
@@ -34,6 +33,7 @@ def check_links(page, released):
         assert links.count() == expected, (week, released, links.count())
         for link in links.all():
             assert link.is_visible(), (week, 'link is hidden after release')
+    assert page.locator('#class-2026-11-19 .materials a').count() == 0
     assert page.locator('#class-2026-10-22 .materials a').count() == 3
     assert page.locator('#class-2026-09-10 .materials a').count() == 1
 
@@ -72,7 +72,7 @@ with sync_playwright() as playwright:
     checks.append('DST repeated hour does not release L9 early')
 
     page = open_at(datetime.fromisoformat('2026-11-25T05:00:00+00:00'))
-    check_links(page, {8, 9, 10, 11})
+    check_links(page, {8, 9, 10})
     assert page.locator('#class-2026-11-26 .materials a').count() == 0
     page.close()
     checks.append('Thanksgiving has no release; L12 stays hidden')
@@ -122,7 +122,7 @@ with sync_playwright() as playwright:
 
     # Fetch each released PDF through the site's actual URL and record its bytes.
     page = open_at(datetime.fromisoformat('2026-12-18T17:00:00+00:00'))
-    check_links(page, {8, 9, 10, 11, 12})
+    check_links(page, {8, 9, 10, 12})
     downloads = []
     for week, _, date in RELEASES:
         href = page.locator(f'#class-{date} .materials a.slides').get_attribute('href')
@@ -132,7 +132,7 @@ with sync_playwright() as playwright:
         downloads.append({'lecture': f'L{week}', 'url': response.url, 'bytes': len(content),
                           'sha256': hashlib.sha256(content).hexdigest()})
     page.close()
-    checks.append('All five PDF links return PDFs; released links remain visible')
+    checks.append('All four PDF links return PDFs; released links remain visible')
     assert not errors, errors
     browser.close()
 
